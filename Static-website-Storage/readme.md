@@ -1,4 +1,4 @@
-# Static Website Hosting on Azure storage + CDN
+# Static Website Hosting on Azure storage
 ## 1. Created a resource group
 Created a resource group named StaticWebsite-Rg to arrange all the resources related to this project and also analyzing the cost which can be used in real scenerios.
 Screenshot is attached named ResourceGroupSTWEB.
