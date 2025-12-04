@@ -57,18 +57,18 @@ Azure automatically created a special container named **$web**.
 - `$web` container publicly serves HTML files  
 - Allows hosting websites without needing a server  
 
- *Screenshot: StaticWebsiteEnable.png*
+ *Screenshot: StaticWebEnabledd-Storage.png*
 
 ---
 
 #  **4. Uploaded Website Files**
-Uploaded `index.html` and `404.html` into the `$web` container.
+Uploaded `index.html` and `error.html` into the `$web` container.
 
 **Why this matters:**  
 - These files are served as the website frontend  
 - Index is the main page, 404 is fallback page  
 
- *Screenshot: WebFilesUpload.png*
+ *Screenshot: index-error-upload.png*
 
 ---
 
@@ -83,23 +83,11 @@ Enabled:
 - Ensures version history is available  
 - Standard best practice for Storage Accounts  
 
- *Screenshot: DataProtection.png*
+ *Screenshot: DataProtection-SoftDel.png*
 
 ---
 
-#  **6. Created a Log Analytics Workspace**
-A workspace named **web-logs-workspace** was created to store logs.
-
-**Why this matters:**  
-- Required for diagnostic logging  
-- Enables powerful Log Analytics queries  
-- Core AZ-104 monitoring skill  
-
- *Screenshot: LogAnalyticsWorkspace.png*
-
----
-
-#  **7. Enabled Diagnostic Settings**
+#  **6. Enabled Diagnostic Settings**
 Enabled diagnostic logs for:
 - Blob Read operations  
 - Blob Write operations  
@@ -113,17 +101,17 @@ Logs were sent to the **Log Analytics Workspace**.
 - Helps security and troubleshooting  
 - Enables alerting based on logs/metrics  
 
-📸 *Screenshot: DiagnosticSettings.png*
+📸 *Screenshot: Logs-Metrics.png*
 
 ---
 
-# 🔹 **8. Created Alert Rule**
+#  **7. Created Alert Rule**
 Configured an alert so I receive a notification whenever my website is accessed.
 
 **Configuration:**  
 - Signal: `Transactions`  
-- Condition: Greater than `0`  
-- Severity: Informational (Sev 4)  
+- Condition: Greater than `1`  
+- Severity: Informational (Sev 3)  
 - Action Group: Email notification  
 
 **Why this matters:**  
@@ -131,7 +119,7 @@ Configured an alert so I receive a notification whenever my website is accessed.
 - Detect unusual access  
 - Demonstrates Azure Monitor knowledge
  
- *Screenshot: AlertRule.png*
+ *Screenshot: created-alertRule.png*
 
 ---
 
@@ -143,27 +131,15 @@ Restricted Storage Account access to **Selected networks** and added my own publ
 - Prevents unauthorized access  
 - Best practice for high-security workloads  
 
- *Screenshot: NetworkingSettings.png*
+ *Screenshot: EnabledSelectedNetworks.png*
 
 ---
 
-#  **10. (Optional) IAM Configuration**
-Planned IAM configuration:
-- Storage Blob Data Contributor  
-- Storage Account Contributor  
-
-**Why this matters:**  
-- Least-privilege access model  
-- Required for role-based access control  
-
-(Will apply when network improves.)
-
----
 
 #  Final Output
 The website is fully functional and accessible via the **Primary Endpoint URL** provided by Azure.
 
-📸 *Screenshot: WebsiteRunning.png*
+ *Screenshot:webworking.png*
 
 ---
 
@@ -179,8 +155,7 @@ All resources can be deleted instantly by deleting the **Resource Group**, preve
 - Log Analytics  
 - Data protection management  
 - Alerts & monitoring  
-- Networking and access control  
-- Resource Group management using Azure CLI  
+- Networking 
 
 ---
 
