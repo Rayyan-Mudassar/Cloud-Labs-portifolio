@@ -8,3 +8,5 @@ I created a storage account named storagestaticazure123, it will host a static w
 In my storage account i created in previous step, i enabled the static website option to makw it able to host a static website, when i enabled this option, it automatically created a container named $web. This will allow my Storage account to serve HTML files. Screenshot is attached named EnableStaticWeb.
 ## 4. Uploaded Website Files
 In this step, i uploaded my static website files, as i am a begineer not an expert so my static website file is also very simple, screenshot is attached named index-error.
+## 5. Storage Account Versioning
+In this step i went in Data protection and enabled soft delete for blobs and containers and also blob versioning, I did to prevent the loss of data from accidental deletion and disastor recovery. screenshot is attached named DATA protection.
