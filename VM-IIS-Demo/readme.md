@@ -19,7 +19,7 @@ This project shows how I created a Windows Server Virtual Machine using the Azur
 
 ---
 
-## 🧠 What I Learned
+## What I Learned
 - How to create and configure a Windows VM using the Azure Portal.  
 - How to allow inbound traffic (RDP and HTTP) via the NSG.  
 - How to connect to the VM with RDP.  
