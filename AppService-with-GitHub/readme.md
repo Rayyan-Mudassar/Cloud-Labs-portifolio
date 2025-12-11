@@ -4,7 +4,7 @@
 Hey! This project shows how I deployed a web app on **Azure App Service (Linux, PHP 8.2)** and connected it to **GitHub for CI/CD**.  
 Initially, I tested deployment using a ZIP file, but later I removed it and fully switched to GitHub integration. Now, any updates I push to GitHub automatically reflect on my live site. 
 
-[Link to the webpage](azureweb-app-dubdb4gkc2ddgsbj.southeastasia-01.azurewebsites.net)
+[Link to the webpage](https.//azureweb-app-dubdb4gkc2ddgsbj.southeastasia-01.azurewebsites.net)
 
 ---
 
