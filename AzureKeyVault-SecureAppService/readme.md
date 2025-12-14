@@ -45,7 +45,7 @@ I first created an Azure Key Vault to act as a centralized and secure place for 
 ![Key Vault Overview](images/1-keyvault-overview.png)
 ```
 
-![Key Vault Overview](images/1-keyvault-overview.png)
+![Key Vault Overview](images/keyvault-overview.png)
 
 ---
 
@@ -57,7 +57,7 @@ I added a secret inside the Key Vault. This secret represents sensitive data tha
 ![Secret Added](images/2-secret-added.png)
 ```
 
-![Secret Added](images/2-secret-added.png)
+![Secret Added](images/secret-added.png)
 
 ---
 
@@ -77,7 +77,7 @@ I enabled **System Assigned Managed Identity** on the App Service so Azure could
 ![Managed Identity Enabled](images/3-managed-identity.png)
 ```
 
-![Managed Identity Enabled](images/3-managed-identity.png)
+![Managed Identity Enabled](images/managed-identity.png)
 
 ---
 
@@ -89,7 +89,7 @@ I granted the App Service’s Managed Identity permission to **Get** secrets fro
 ![Access Policy Assigned](images/4-access-policy.png)
 ```
 
-![Access Policy Assigned](images/4-access-policy.png)
+![Access Policy Assigned](images/access-policy.png)
 
 ---
 
@@ -101,7 +101,7 @@ While testing access, I faced issues related to **access tokens**. This helped m
 ![Access Tokens](images/5-access-tokens.png)
 ```
 
-![Access Tokens](images/5-access-tokens.png)
+![Access Tokens](images/access-tokens.png)
 
 ---
 
@@ -113,7 +113,7 @@ After fixing permissions and identity access, the application successfully retri
 ![Secret Output](images/6-secret-output.png)
 ```
 
-![Secret Output](images/6-secret-output.png)
+![Secret Output](images/secret-output.png)
 
 ---
 
@@ -125,7 +125,7 @@ I reviewed Key Vault firewall settings to understand **public vs private access*
 ![Firewall Settings](images/7-firewall-settings.png)
 ```
 
-![Firewall Settings](images/7-firewall-settings.png)
+![Firewall Settings](images/firewall-settings.png)
 
 ---
 
@@ -137,7 +137,7 @@ Finally, I enabled **diagnostic logs** and sent them to **Azure Log Analytics Wo
 ![Diagnostic Logs Enabled](images/8-diagnostic-logs.png)
 ```
 
-![Diagnostic Logs Enabled](images/8-diagnostic-logs.png)
+![Diagnostic Logs Enabled](images/diagnostic-logs.png)
 
 ---
 
