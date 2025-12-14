@@ -137,7 +137,7 @@ Finally, I enabled **diagnostic logs** and sent them to **Azure Log Analytics Wo
 ![Diagnostic Logs Enabled](images/8-diagnostic-logs.png)
 ```
 
-![Diagnostic Logs Enabled](images/diagnostic-logs.png)
+![Diagnostic Logs Enabled](images/diagnostics-logs.png)
 
 ---
 
