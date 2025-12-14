@@ -22,7 +22,7 @@ This is a **real-world cloud security pattern** used by companies to protect sen
 
 ---
 
-## 🏗 Architecture Used
+##  Architecture Used
 
 User → Azure App Service → Managed Identity → Azure Key Vault → Secret Value
 
@@ -123,7 +123,7 @@ Below are screenshots added using **pure Markdown syntax**.
 ![Key Vault Secret](images/keyvault-secret.png)
 ```
 
-![Key Vault Secret](images/keyvault-secret.png)
+![Key Vault Secret](images/keyvault-overview-1.png)
 
 ### Managed Identity Enabled
 
