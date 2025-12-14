@@ -19,12 +19,12 @@ Initially, I tested deployment using a ZIP file, but later I removed it and full
 ## Screenshots
 
 1. **Resource Group**
-![Resoruce Group](Screenshot(9).png)
+![Resoruce Group](AppService-with-GitHub/Screenshot(9).png)
 
-2. **App Service Overview**
+3. **App Service Overview**
    Screenshot(10)
 
-3. **App Service Plan (PHP 8.2 Linux)**
+4. **App Service Plan (PHP 8.2 Linux)**
    Screenshot(11)
    
 5. **SSH Terminal showing GitHub deployment**
