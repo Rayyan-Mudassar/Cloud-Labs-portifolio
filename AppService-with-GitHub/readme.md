@@ -19,7 +19,7 @@ Initially, I tested deployment using a ZIP file, but later I removed it and full
 ## Screenshots
 
 1. **Resource Group**
-![Resoruce Group](AppService-with-GitHub/Screenshot(9).png)
+   Screenshot(9)
 
 3. **App Service Overview**
    Screenshot(10)
