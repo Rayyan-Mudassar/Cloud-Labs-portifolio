@@ -1,175 +1,174 @@
-#  Azure Key Vault + App Service (Secure Secrets Project)
+#  Azure Key Vault + App Service (GitHub Integrated Project)
 
 ##  Project Overview
 
-This project demonstrates **secure secret management in Azure** by integrating **Azure Key Vault** with **Azure App Service** using **Managed Identity**.
+This project demonstrates how I securely connected an **Azure App Service** (deployed via **GitHub integration**) with **Azure Key Vault** using **System Assigned Managed Identity**.
 
-Instead of hardcoding secrets (like database passwords or API keys) inside the application code, the app securely fetches them from **Azure Key Vault** at runtime.
-
-This is a **real-world cloud security pattern** used by companies to protect sensitive information.
+The goal was to **securely store and retrieve secrets** without hardcoding them in the application or GitHub repository, following **real-world cloud security practices**.
 
 ---
 
-##  What Problem This Project Solves
+##  How This Project Was Built (My Actual Flow)
 
-❌ Secrets stored in code or config files can be leaked
-❌ Rotating secrets becomes risky and manual
-❌ Developers shouldn’t have direct access to production secrets
+I built this project step by step while deploying a live web app and securing it using Azure-native security features.
 
-✅ Azure Key Vault centralizes secrets
-✅ Managed Identity removes the need for credentials
-✅ Secure, auditable, and scalable solution
+This README reflects **exactly how I implemented it**, including issues I faced and how they were resolved.
 
 ---
 
-##  Architecture Used
+##  Architecture
 
-User → Azure App Service → Managed Identity → Azure Key Vault → Secret Value
-
-**Key Components:**
-
-* Azure App Service (Linux, PHP)
-* Azure Key Vault
-* System Assigned Managed Identity
-* Access Policies / RBAC
+User → Azure App Service (GitHub Deployed)
+→ Managed Identity
+→ Azure Key Vault
+→ Secret Retrieved Securely
 
 ---
 
-##  Services Used
+##  Azure Services Used
 
-* **Azure Resource Group** – Logical container
-* **Azure App Service** – Hosts the web application
-* **Azure Key Vault** – Stores secrets securely
-* **Managed Identity** – Secure authentication between services
-
----
-
-##  Implementation Steps
-
-### 1️⃣ Create Resource Group
-
-Created a new resource group to organize all services.
+* **Azure App Service (Linux)** – Web application
+* **GitHub** – Source control & deployment
+* **Azure Key Vault** – Secure secret storage
+* **Managed Identity** – Passwordless authentication
+* **Azure Monitor / Log Analytics** – Diagnostics
 
 ---
 
-### 2️⃣ Create Azure Key Vault
+##  Implementation Steps (As I Did Them)
 
-* Created a Key Vault
-* Added a secret (`Mysterious#1`)
+### 1️⃣ Azure Key Vault Created
 
----
-
-### 3️⃣ Create Azure App Service
-
-* Runtime: PHP 8.2 (Linux)
-* Deployment using ZIP / GitHub
-
----
-
-### 4️⃣ Enable Managed Identity
-
-* Enabled **System Assigned Managed Identity** on App Service
-* This identity is automatically managed by Azure
-
----
-
-### 5️⃣ Grant Key Vault Access
-
-* Assigned **Get** and **List** permissions for secrets
-* Allowed the App Service identity to access Key Vault
-
----
-
-### 6️⃣ Access Secret from App
-
-The application retrieves secrets securely from Key Vault instead of storing them locally.
-
----
-
-##  Why App Service Was Connected to Key Vault 
-
-App Service was used because:
-
-* It supports **Managed Identity** natively
-* It can securely authenticate without usernames or passwords
-* It is commonly used in real-world production environments
-
-Other resources *could* connect, but App Service is ideal for:
-
-* Web apps
-* APIs
-* Microservices
-
----
-
-##  Real-World Use Case
-
-* Storing database credentials
-* Protecting API keys
-* Secure configuration for production apps
-* Compliance-ready cloud architecture
-
-This pattern is used by **banks, SaaS companies, and enterprises**.
-
----
-
-##  Screenshots
-
-Below are screenshots added using **pure Markdown syntax**.
-
-### Key Vault Secret
+I first created an Azure Key Vault to act as a centralized and secure place for storing secrets.
 
 ```md
-![Key Vault Secret](images/keyvault-secret.png)
+![Key Vault Overview](images/1-keyvault-overview.png)
 ```
 
-![Key Vault Secret](images/keyvault-overview-1.png)
-
-### Managed Identity Enabled
-
-```md
-![Managed Identity Enabled](images/managed-identity.png)
-```
-
-![Managed Identity Enabled](images/managed-identity.png)
-
-### Key Vault Access Policy
-
-```md
-![Key Vault Access Policy](images/access-policy.png)
-```
-
-![Key Vault Access Policy](images/access-policy.png)
-
-### Application Output
-
-```md
-![Application Output](images/app-output.png)
-```
-
-![Application Output](images/app-output.png)
+![Key Vault Overview](images/1-keyvault-overview.png)
 
 ---
 
-## What I Learned
+### 2️⃣ Secret Added to Key Vault
 
-* How Azure Key Vault works in real production
-* Why Managed Identity is more secure than credentials
-* Secure cloud design patterns
-* How services authenticate without secrets
+I added a secret inside the Key Vault. This secret represents sensitive data that should never be stored in code or GitHub.
+
+```md
+![Secret Added](images/2-secret-added.png)
+```
+
+![Secret Added](images/2-secret-added.png)
 
 ---
 
-## Author
+### 3️⃣ App Service with GitHub Integration
+
+I already had an Azure App Service deployed and connected to **GitHub**, so every change pushed to GitHub automatically updated the web app.
+
+This ensured real-world CI-style deployment while keeping secrets out of the repository.
+
+---
+
+### 4️⃣ Managed Identity Enabled on App Service
+
+I enabled **System Assigned Managed Identity** on the App Service so Azure could handle authentication securely without credentials.
+
+```md
+![Managed Identity Enabled](images/3-managed-identity.png)
+```
+
+![Managed Identity Enabled](images/3-managed-identity.png)
+
+---
+
+### 5️⃣ Key Vault Access Policy Assigned
+
+I granted the App Service’s Managed Identity permission to **Get** secrets from Key Vault.
+
+```md
+![Access Policy Assigned](images/4-access-policy.png)
+```
+
+![Access Policy Assigned](images/4-access-policy.png)
+
+---
+
+### 6️⃣ Access Token Issue & Debugging
+
+While testing access, I faced issues related to **access tokens**. This helped me understand how Managed Identity requests tokens internally and why correct permissions are required.
+
+```md
+![Access Tokens](images/5-access-tokens.png)
+```
+
+![Access Tokens](images/5-access-tokens.png)
+
+---
+
+### 7️⃣ Secret Successfully Retrieved in App
+
+After fixing permissions and identity access, the application successfully retrieved the secret from Key Vault and displayed the output.
+
+```md
+![Secret Output](images/6-secret-output.png)
+```
+
+![Secret Output](images/6-secret-output.png)
+
+---
+
+### 8️⃣ Firewall & Network Configuration
+
+I reviewed Key Vault firewall settings to understand **public vs private access** and how network restrictions affect service communication.
+
+```md
+![Firewall Settings](images/7-firewall-settings.png)
+```
+
+![Firewall Settings](images/7-firewall-settings.png)
+
+---
+
+### 9️⃣ Diagnostic Logs Enabled
+
+Finally, I enabled **diagnostic logs** and sent them to **Azure Log Analytics Workspace** to monitor access and troubleshoot issues.
+
+```md
+![Diagnostic Logs Enabled](images/8-diagnostic-logs.png)
+```
+
+![Diagnostic Logs Enabled](images/8-diagnostic-logs.png)
+
+---
+
+##  Why This Design Is Secure
+
+* No secrets stored in GitHub
+* No credentials inside application code
+* Managed Identity handles authentication
+* Access controlled via Azure policies
+* Logging enabled for monitoring and auditing
+
+---
+
+##  What I Learned
+
+* Real-world usage of Azure Key Vault
+* How Managed Identity works internally
+* Debugging access token issues
+* Importance of firewall and network security
+* Monitoring using Azure diagnostics
+
+---
+
+##  Author
 
 **Rayyan Mudassar**
 
 ---
 
-## Final Notes
+##  Final Notes
 
-This project focuses on **security-first cloud design**, not just deployment.
-It proves hands-on understanding of **Azure security fundamentals**.
-
----
+This project reflects **hands-on Azure security implementation**, not just theory.
+It demonstrates how production applications securely manage secrets using Azure-native services.
 
