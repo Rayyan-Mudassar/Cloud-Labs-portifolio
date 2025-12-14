@@ -19,7 +19,7 @@ Initially, I tested deployment using a ZIP file, but later I removed it and full
 ## Screenshots
 
 1. **Resource Group**
-   Screenshot (9) 
+![Resoruce Group](Screenshot(9).png)
 
 2. **App Service Overview**
    Screenshot(10)
