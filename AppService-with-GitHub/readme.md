@@ -22,26 +22,25 @@ Initially, I tested deployment using a ZIP file, but later I removed it and full
    ![Azure AD Groups](ss1.png)
 
 3. **App Service Overview**
-   Screenshot(10)
-
-4. **App Service Plan (PHP 8.2 Linux)**
-   Screenshot(11)
+   ![Azure AD Groups](ss2.png)
    
-5. **SSH Terminal showing GitHub deployment**
-   Screenshot(12)
+5. **App Service Plan (PHP 8.2 Linux)**
+   ![Azure AD Groups](ss3.png)
+   
+6. **SSH Terminal showing GitHub deployment**
+   ![Azure AD Groups](ss4.png)
    
 7. **Deployment Center GitHub Integration**
-   Screenshot(13)
+    ![Azure AD Groups](ss5.png)
+   
+9. **Deployment Logs**
+ ![Azure AD Groups](ss6.png) 
 
-8. **Deployment Logs**
- Screenshot(14) 
+10. **Website Running Live**
+   ![Azure AD Groups](ss7.png)
 
-9. **Website Running Live**
-  Screenshot(15)
-
-10. **GitHub Repository**
-  Screenshot(16)
-
+11. **GitHub Repository**
+  ![Azure AD Groups](ss8.png)
 ---
 
 ## Steps Performed
