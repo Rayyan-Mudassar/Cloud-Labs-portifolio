@@ -19,7 +19,7 @@ Initially, I tested deployment using a ZIP file, but later I removed it and full
 ## Screenshots
 
 1. **Resource Group**
-   Screenshot(9)
+   ![Azure AD Groups](screenshot(9).png)
 
 3. **App Service Overview**
    Screenshot(10)
