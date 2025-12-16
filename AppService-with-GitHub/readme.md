@@ -19,7 +19,7 @@ Initially, I tested deployment using a ZIP file, but later I removed it and full
 ## Screenshots
 
 1. **Resource Group**
-   ![Azure AD Groups](AppService-with-GitHub/screenshot(9).png)
+   ![Azure AD Groups](AppService-with-GitHub/ss1.png)
 
 3. **App Service Overview**
    Screenshot(10)
