@@ -52,10 +52,14 @@ This project shows how I created a Windows Server Virtual Machine using the Azur
 ---
 
 ## Screenshots
-- **vm-iis-demo** page (shows VM name and Public IP).  
-- **NSG-rules** (shows HTTP and RDP allowed during setup).  
-- **powershell** showing successful IIS installation in the VM.
-- **final-site** showing the wepage working.
+- **vm-iis-demo**
+-  ![Azure AD Groups](vm-iis-demo.png)  
+- **NSG-rules**
+-  ![Azure AD Groups](NSG-rules.png)  
+- **powershell**
+-  ![Azure AD Groups](powershell.png)
+- **final-site**
+-  ![Azure AD Groups](final-site.png)
 
 ---
 
