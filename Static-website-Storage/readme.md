@@ -34,7 +34,7 @@ I created a Resource Group named **StaticWebsite-RG** to organize and manage all
 - Easier management and cleanup  
 - Cost tracking per project  
 
- *Screenshot: StaticWeb-RG*
+ ![Azure AD Groups](StaticWeb-RG.png)
 
 ---
 
@@ -45,7 +45,7 @@ Created a Storage Account named **storagestaticazure123** using **Locally Redund
 - Storage Account is required to host static website files  
 - LRS is low-cost and perfect for demo environments  
 
- *Screenshot: Storagestaticazure123.png*
+  ![Azure AD Groups](Storagestaticazure123.png)
 
 ---
 
@@ -57,7 +57,7 @@ Azure automatically created a special container named **$web**.
 - `$web` container publicly serves HTML files  
 - Allows hosting websites without needing a server  
 
- *Screenshot: StaticWebEnabledd-Storage.png*
+ ![Azure AD Groups](StaticWebEnabled-Storage.png)
 
 ---
 
@@ -68,7 +68,7 @@ Uploaded `index.html` and `error.html` into the `$web` container.
 - These files are served as the website frontend  
 - Index is the main page, 404 is fallback page  
 
- *Screenshot: index-error-upload.png*
+ ![Azure AD Groups](index-error-upload.png)
 
 ---
 
@@ -83,7 +83,7 @@ Enabled:
 - Ensures version history is available  
 - Standard best practice for Storage Accounts  
 
- *Screenshot: DataProtection-SoftDel.png*
+ ![Azure AD Groups](DataProtection-SoftDel.png)
 
 ---
 
@@ -101,7 +101,7 @@ Logs were sent to the **Log Analytics Workspace**.
 - Helps security and troubleshooting  
 - Enables alerting based on logs/metrics  
 
-📸 *Screenshot: Logs-Metrics.png*
+ ![Azure AD Groups](Logs-Metrics.png)
 
 ---
 
@@ -119,7 +119,7 @@ Configured an alert so I receive a notification whenever my website is accessed.
 - Detect unusual access  
 - Demonstrates Azure Monitor knowledge
  
- *Screenshot: created-alertRule.png*
+ ![Azure AD Groups](created-alertRule.png)
 
 ---
 
@@ -131,16 +131,14 @@ Restricted Storage Account access to **Selected networks** and added my own publ
 - Prevents unauthorized access  
 - Best practice for high-security workloads  
 
- *Screenshot: EnabledSelectedNetworks.png*
-
+ ![Azure AD Groups](EnabledSelectedNetworks.png)
 ---
 
 
 #  Final Output
 The website is fully functional and accessible via the **Primary Endpoint URL** provided by Azure.
 
- *Screenshot:webworking.png*
-
+ ![Azure AD Groups](webworking.png)
 ---
 
 #  Cleanup
