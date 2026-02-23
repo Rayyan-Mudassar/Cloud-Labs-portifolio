@@ -51,7 +51,7 @@ User → Application Load Balancer → EC2 Instance 1 → Nginx → Flask App (P
   - 80 (HTTP)
 
 Screenshot:  
-(screenshots/ec2-instances.png)
+![EC2](screenshots/ec2-instances.png)
 
 ---
 
@@ -124,7 +124,7 @@ http://EC2-PUBLIC-IP
 ```
 
 Screenshot:  
-screenshots/nginx-status.png
+![Nginx](screenshots/nginx-status.png)
 
 ---
 
@@ -133,8 +133,7 @@ screenshots/nginx-status.png
 Created a clone EC2 instance with same setup to enable load balancing.
 
 Screenshots:  
-screenshots/instance1.png  
-screenshots/instance2.png  
+![instance](screenshots/instance.png)
 
 ---
 
@@ -145,7 +144,7 @@ screenshots/instance2.png
 - Verified health status as healthy
 
 Screenshot:  
-screenshots/target-group.png
+![Target Group](screenshots/target-group.png)
 
 ---
 
@@ -156,7 +155,7 @@ screenshots/target-group.png
 - Enabled HTTP listener on port 80
 
 Screenshot:  
-screenshots/load-balancer.png
+![ALB](screenshots/load-balancer.png)
 
 ---
 
@@ -171,7 +170,8 @@ http://load-balancer-dns-name
 Traffic successfully distributed between instances.
 
 Screenshot:  
-screenshots/load-balancer-working.png
+![LB1](screenshots/lb1.png)
+![LB2](screenshots/lb2.png)
 
 ---
 
@@ -195,17 +195,8 @@ This ensures continuous uptime.
 
 ---
 
-## Future Improvements
-
-- Add Auto Scaling
-- Add HTTPS using SSL certificate
-- Connect custom domain using Route 53
-- Docker container deployment
-- Add monitoring and logging
-
----
-
 ## Author
 
+Rayyan Mudassar
 AWS Cloud Engineering Project  
 Media Viewer Load Balanced Deployment
