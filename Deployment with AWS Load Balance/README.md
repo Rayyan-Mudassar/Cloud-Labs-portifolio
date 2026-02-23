@@ -199,4 +199,4 @@ This ensures continuous uptime.
 
 Rayyan Mudassar
 AWS Cloud Engineering Project  
-Media Viewer Load Balanced Deployment
+Media Viewer Load Balanced Deployment.
