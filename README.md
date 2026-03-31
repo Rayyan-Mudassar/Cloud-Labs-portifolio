@@ -11,7 +11,7 @@
 
 ## 👋 About Me
 
-I am a cloud practitioner with hands-on experience across **AWS and Azure**, focused on building secure, highly available, and scalable cloud infrastructure. My background spans cloud administration, identity & access management, network security, and infrastructure automation.
+I am a cloud engineer with hands-on experience across **AWS and Azure**, focused on building secure, highly available, and scalable cloud infrastructure. My background spans cloud administration, identity & access management, network security, and infrastructure automation.
 
 - 🎯 **Goal:** Land a role in Cloud Engineering or Cloud Security
 - 📜 **Certifications:** AZ-104 (Practice Assessment Passed) | AWS SAA (In Progress) | ISC2 CC (April 2026)
